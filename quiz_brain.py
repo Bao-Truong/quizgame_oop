@@ -11,6 +11,7 @@ class QuizBrain:
     def next_question(self):
         if(not self.out_of_question()):
             question = f"Q.{self.question_number+1}: {self.question_list[self.question_number].text}"
+            # print(f"pssst, {self.question_list[self.question_number].answer}")
             student_answer = input(question + " (True/False)?: ").lower()
             return self.check_answer(student_answer)
         else:
